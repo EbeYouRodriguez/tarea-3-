@@ -6,22 +6,22 @@ const imagenes = [
 
 let indice = 0;
 
-// Selecciona de forma más precisa la imagen principal del producto de Bootstrap
-const imagen = document.querySelector(".card img") || document.querySelector("img.card-img-top") || document.querySelector(".col-md-6 img");
-// Selecciona el botón que contiene el texto "ver mas"
-const boton = document.querySelector(".btn-outline-dark");
+document.addEventListener("DOMContentLoaded", () => {
+    // Usa los IDs que ya tienes en el HTML (más seguros)
+    const imagen = document.getElementById("imagen-peces");
+    const boton = document.getElementById("boton-cambiar");
 
-if (boton && imagen) {
-    boton.addEventListener("click", (e) => {
-        // Evita que el botón recargue la página si es un enlace o un submit
-        e.preventDefault(); 
-        
-        // Cambia al siguiente índice de forma circular
-        indice = (indice + 1) % imagenes.length;
-        
-        // Asigna la nueva URL de la imagen
-        imagen.src = imagenes[indice];
-    });
-} else {
-    console.error("No se encontró el botón o la imagen en el HTML. Verifica sus clases.");
-}
+    if (boton && imagen) {
+        boton.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            // Cambia al siguiente índice de forma circular
+            indice = (indice + 1) % imagenes.length;
+
+            // Cambia la imagen
+            imagen.src = imagenes[indice];
+        });
+    } else {
+        console.error("No se encontró el botón o la imagen. Verifica los IDs: imagen-peces y boton-cambiar");
+    }
+});
