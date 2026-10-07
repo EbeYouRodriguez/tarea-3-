@@ -5,9 +5,23 @@ const imagenes = [
 ];
 
 let indice = 0;
-const imagen = document.querySelector ( ".card-img-top");
-const boton = document.querySelector ( ".btn.btn-outline-dark");
 
-boton.addEventListener("click", () => {indice = (indice + 1)% imagenes.length;
-    imagen.src = imagenes[indice];
-})
+// Selecciona de forma más precisa la imagen principal del producto de Bootstrap
+const imagen = document.querySelector(".card img") || document.querySelector("img.card-img-top") || document.querySelector(".col-md-6 img");
+// Selecciona el botón que contiene el texto "ver mas"
+const boton = document.querySelector(".btn-outline-dark");
+
+if (boton && imagen) {
+    boton.addEventListener("click", (e) => {
+        // Evita que el botón recargue la página si es un enlace o un submit
+        e.preventDefault(); 
+        
+        // Cambia al siguiente índice de forma circular
+        indice = (indice + 1) % imagenes.length;
+        
+        // Asigna la nueva URL de la imagen
+        imagen.src = imagenes[indice];
+    });
+} else {
+    console.error("No se encontró el botón o la imagen en el HTML. Verifica sus clases.");
+}
