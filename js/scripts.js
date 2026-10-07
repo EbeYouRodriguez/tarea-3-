@@ -25,3 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("No se encontró el botón o la imagen. Verifica los IDs: imagen-peces y boton-cambiar");
     }
 });
+function cambiarTitulo() {
+  let titulo = document.getElementById("titulo");
+  titulo.textContent = "Ejemplos JS";
+  titulo.style.color = "red";
