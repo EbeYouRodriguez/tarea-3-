@@ -53,3 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+function cambiarTitulo() {
+  let titulo = document.getElementById("titulo");
+  titulo.textContent = "PES GLOBLO ";
+  titulo.style.color = "red";
+}
