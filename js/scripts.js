@@ -25,11 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("No se encontró el botón o la imagen. Verifica los IDs: imagen-peces y boton-cambiar");
     }
 });
+
 function cambiarTitulo() {
   let titulo = document.getElementById("titulo");
   titulo.textContent = "pes globo ";
   titulo.style.color = "red";
 }
+
 function convertirDolares() {
     let dolares = Number(prompt("Ingresa la cantidad en dólares:"));
     let tasa = Number(prompt("Ingresa la tasa de cambio a moneda local:"));
@@ -37,6 +39,7 @@ function convertirDolares() {
     let resultado = dolares * tasa;
     alert("El equivalente es: " + resultado.toFixed(2));
 }
+
 function calcularTerreno() {
     let largo = Number(prompt("Ingresa el largo del terreno:"));
     let ancho = Number(prompt("Ingresa el ancho del terreno:"));
