@@ -75,14 +75,26 @@
                             <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYB40MD6ymMQg2BuEpB7r5O5Ba5IyVEGuzMlNxpebH3BMPNgl1RqPstq6z&s=10" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
-                              <div class="mt-4">
-                               <h5>Calculadora de suma</h5>
-                                <div class="d-flex gap-2 mb-2">
-                                    <input type="number" id="numero1" class="form-control" placeholder="Número 1" style="max-width: 30px;">
-                                    <input type="number" id="numero2" class="form-control" placeholder="Número 2" style="max-width: 30px;">
-                                    <button id="boton-sumar" class="btn btn-outline-dark" type="button">Sumar</button>
+                              <div class="mt-4 p-3 border rounded bg-light">
+                                <h5 class="mb-3">Calculadora de suma</h5>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Número 1</label>
+                                    <input type="number" id="numero1" class="form-control" placeholder="Escribe un número">
                                 </div>
-                                <p class="fw-bold">Resultado: <span id="resultado-suma">0</span></p>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Número 2</label>
+                                    <input type="number" id="numero2" class="form-control" placeholder="Escribe un número">
+                                </div>
+                                
+                                <button id="boton-sumar" class="btn btn-dark w-100 mb-3" type="button">
+                                    Sumar
+                                </button>
+                                
+                                <div class="alert alert-success mb-0">
+                                    <strong>Resultado:</strong> <span id="resultado-suma">0</span>
+                                </div>
                             </div>
                         </div>
                     </div>
