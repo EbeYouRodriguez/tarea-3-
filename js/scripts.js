@@ -27,6 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 function cambiarTitulo() {
   let titulo = document.getElementById("titulo");
-  titulo.textContent = "Ejemplos JS";
+  titulo.textContent = "pes globo ";
   titulo.style.color = "red";
+}
+function convertirDolares() {
+    let dolares = Number(prompt("Ingresa la cantidad en dólares:"));
+    let tasa = Number(prompt("Ingresa la tasa de cambio a moneda local:"));
+    
+    let resultado = dolares * tasa;
+    alert("El equivalente es: " + resultado.toFixed(2));
+}
+function calcularTerreno() {
+    let largo = Number(prompt("Ingresa el largo del terreno:"));
+    let ancho = Number(prompt("Ingresa el ancho del terreno:"));
+    
+    let area = largo * ancho;
+    let perimetro = 2 * (largo + ancho);
+    
+    alert("Área: " + area + "\nPerímetro: " + perimetro);
 }
