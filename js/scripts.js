@@ -1,7 +1,7 @@
 const imagenes = [
-    "https://content.elmueble.com/medio/2023/12/19/pez-dorado_c0bb19e3_231219190246_900x900.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1SyulkJJoJqt1DjNnUyzp5sio5v3wmQJlmfrK_1L-IIljPiSb4_-3yEk&s=10",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVV7Z33XVD9P0Su-BC9r56vDrecN9RWEJbDlFTdxWVQkPc5eMc66Hgisdy&s=10"
+   "https://upload.wikimedia.org/wikipedia/commons/6/6d/Mantis_shrimp.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original",
+   "https://imagenes2.eltiempo.com/files/image_600_700/files/fp/uploads/2024/11/06/672bbe5d7f642.r_d.476-238-19028.png",
+    "https://scubadventure.cl/wp-content/uploads/2025/03/g2.jpg"
 ];
 
 let indice = 0;
