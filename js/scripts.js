@@ -8,44 +8,48 @@ let indice = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ===== 1. Convertir dólares =====
+    const botonDolares = document.getElementById("boton-dolares");
+    if (botonDolares) {
+        botonDolares.addEventListener("click", () => {
+            let dolares = Number(prompt("Ingresa la cantidad en dólares:"));
+            let tasa = Number(prompt("Ingresa la tasa de cambio a moneda local:"));
+            let resultado = dolares * tasa;
+            alert("El equivalente es: " + resultado.toFixed(2));
+        });
+    }
+
+    // ===== 2. Calcular terreno =====
+    const botonTerreno = document.getElementById("boton-terreno");
+    if (botonTerreno) {
+        botonTerreno.addEventListener("click", () => {
+            let largo = Number(prompt("Ingresa el largo del terreno:"));
+            let ancho = Number(prompt("Ingresa el ancho del terreno:"));
+            let area = largo * ancho;
+            let perimetro = 2 * (largo + ancho);
+            alert("Área: " + area + "\nPerímetro: " + perimetro);
+        });
+    }
+
+    // ===== 3. Cambiar imagen =====
     const imagen = document.getElementById("imagen-peces");
-    const boton = document.getElementById("boton-cambiar");
-
-    if (boton && imagen) {
-        boton.addEventListener("click", (e) => {
+    const botonImagen = document.getElementById("boton-cambiar");
+    if (botonImagen && imagen) {
+        botonImagen.addEventListener("click", (e) => {
             e.preventDefault();
-
-  
             indice = (indice + 1) % imagenes.length;
-
-          
             imagen.src = imagenes[indice];
         });
-    } else {
-        console.error("No se encontró el botón o la imagen. Verifica los IDs: imagen-peces y boton-cambiar");
+    }
+
+    // ===== 4. Cambiar texto =====
+    const botonTexto = document.getElementById("boton-texto");
+    const titulo = document.querySelector("h1.display-5");
+    const parrafo = document.querySelector("p.lead");
+    if (botonTexto && titulo && parrafo) {
+        botonTexto.addEventListener("click", () => {
+            titulo.textContent = "LOS PECES TROPICALES";
+            parrafo.textContent = "Los peces tropicales de agua dulce son ideales para principiantes. Son coloridos, resistentes y fáciles de cuidar en un acuario bien equipado.";
+        });
     }
 });
-
-function cambiarTitulo() {
-  let titulo = document.getElementById("titulo");
-  titulo.textContent = "pes globo ";
-  titulo.style.color = "red";
-}
-
-function convertirDolares() {
-    let dolares = Number(prompt("Ingresa la cantidad en dólares:"));
-    let tasa = Number(prompt("Ingresa la tasa de cambio a moneda local:"));
-    
-    let resultado = dolares * tasa;
-    alert("El equivalente es: " + resultado.toFixed(2));
-}
-
-function calcularTerreno() {
-    let largo = Number(prompt("Ingresa el largo del terreno:"));
-    let ancho = Number(prompt("Ingresa el ancho del terreno:"));
-    
-    let area = largo * ancho;
-    let perimetro = 2 * (largo + ancho);
-    
-    alert("Área: " + area + "\nPerímetro: " + perimetro);
-}
