@@ -7,7 +7,7 @@ const imagenes = [
 let indice = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Usa los IDs que ya tienes en el HTML (más seguros)
+
     const imagen = document.getElementById("imagen-peces");
     const boton = document.getElementById("boton-cambiar");
 
@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
         boton.addEventListener("click", (e) => {
             e.preventDefault();
 
-            // Cambia al siguiente índice de forma circular
+  
             indice = (indice + 1) % imagenes.length;
 
-            // Cambia la imagen
+          
             imagen.src = imagenes[indice];
         });
     } else {
